@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <h1>{{TITLE}}</h1>
+      <a class="btn" href="viewer/">Open empty viewer</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card drop" id="drop" tabindex="0">
+      <div>
+        <strong>Open a local file (not uploaded)</strong>
+        <p class="muted">Drop a log here or <label class="link" for="picker">choose a file</label>. It stays in your browser and opens in the viewer.</p>
+        <p class="muted small">Supported: .wpilog, .wpilogxz, .rlog, .dslog, .dsevents, .csv. Phoenix <code>.hoot</code> and REV <code>.revlog</code> logs are not supported; convert them first with AdvantageScope desktop or the Phoenix tools.</p>
+      </div>
+      <input id="picker" type="file" accept=".wpilog,.wpilogxz,.rlog,.log,.dslog,.dsevents,.csv" hidden>
+    </section>
+
+    <section class="card">
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search all logs..." aria-label="Search logs">
+        <label>Sort
+          <select id="sort">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+          </select>
+        </label>
+      </div>
+      <p id="warn" class="muted small" role="status" hidden></p>
+      <nav id="crumbs" class="crumbs" aria-label="Folder"></nav>
+      <div id="list" class="list"></div>
+      <p id="empty" class="muted" hidden></p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    Viewer powered by AdvantageScope Lite (BSD-3-Clause, &copy; Littleton Robotics) &mdash;
+    <a href="LICENSE-AdvantageScope.txt">license</a>,
+    <a href="ThirdPartyLicenses.txt">third-party licenses</a>
+  </footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="log-index.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

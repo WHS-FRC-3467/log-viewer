@@ -1,0 +1,19 @@
+{
+  "title": "Team 3467 Log Viewer",
+  "teamNumber": 3467,
+  "logSources": [
+    {
+      "repo": "WHS-FRC-3467/logs-2026",
+      "branch": "main",
+      "folder": "2026"
+    }
+  ],
+  "excludeBundledAssets": [
+    "Field2d_20252026FTCFieldV1",
+    "Field2d_FTCEvergreen",
+    "Field3d_20252026FTCFieldV1",
+    "Robot_FTCDriveBaseV1",
+    "Robot_FTCSimpleDriveBase",
+    "Robot_2026FRCKitBotV1"
+  ]
+}
